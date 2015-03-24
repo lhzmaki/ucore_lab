@@ -1,7 +1,8 @@
 ```
 练习一：
 1.
-采用gcc –o –c 编译现有的.c文件生成一系列.o文件，采用ld指令将这些目标文件转化成一个执行程序bootblock.out，最后用dd指令生成一个虚拟空间，输出到ucore.img
+采用gcc –o –c 编译现有的.c文件生成一系列.o文件，采用ld指令将这些目标文件转化成一个执行程序bootblock.out，
+最后用dd指令生成一个虚拟空间，输出到ucore.img
 
 2.
 从sign.c中的代码
