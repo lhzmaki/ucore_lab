@@ -34,7 +34,8 @@ movl  %eax  %cr0
 readsect函数实现硬盘扇区的读取，其内部使用内联汇编实现outb，采用IO寻址方式将外设的数据读入到内存。
 Bootmain函数实现了ELF格式的判断和读取：
 首先通过ELFHDR的e_magic成员判断该文件是否为ELF格式的
-当其为ELF格式时，从其头部的描述ELF文件应存到内存中什么位置的描述表的头地址（ELFHDR+ ELFHDR->e_phoff）开始，使用readseg函数依次将其中内容加载到内存，最后根据ELFHDR->e_entry找到内核的入口
+当其为ELF格式时，从其头部的描述ELF文件应存到内存中什么位置的描述表的头地址（ELFHDR+ELFHDR->e_phoff）开始,
+使用readseg函数依次将其中内容加载到内存，最后根据ELFHDR->e_entry找到内核的入口
 
 ```
 
