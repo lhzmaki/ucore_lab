@@ -43,4 +43,8 @@ default_free_pages函数只需将list_add改成list_add_before即可
 页表项存在时，得到对应页，将该页的reference - 1，当reference为0时释放该Page
 清除二级页表只需将ptep指针清空
 
+全局变量pages在page_init函数中可以看出即为页目录以及页表中对应的页
+
+如果希望虚拟地址与物理地址相等，则需要将ucore的起始地址和内核虚地址设为相同的值
+
 ```
