@@ -23,13 +23,13 @@ do_exit：
 
 状态图：
 			wakeup_proc                           do_wait
-PROC_UNINIT_--------------------------->                    ----------------------> 
-					PROC_RUNNABLE <---------------------PROC_SLEEPING                         
+PROC_UNINIT_--------------------------->              ----------------------> 
+					PROC_RUNNABLE <---------------------   PROC_SLEEPING                         
 						|		do_exit		|			
-						|					|
-						|do_exit				|
-						|					|
-						|			do_exit		|		
-					PROC_ZOMBIE <--------------------------------------|		
+						|				|
+						|do_exit			|
+						|				|
+						|		do_exit		|		
+					PROC_ZOMBIE <---------------------------|		
                             
 ```
