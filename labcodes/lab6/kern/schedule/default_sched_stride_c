@@ -7,7 +7,7 @@
 #define USE_SKEW_HEAP 1
 
 /* You should define the BigStride constant here*/
-/* LAB6: YOUR CODE */
+/* LAB6: 2012011327 */
 #define BIG_STRIDE    /* you should give a value, and is ??? */
 
 /* The compare function for two skew_heap_node_t's and the
@@ -36,11 +36,14 @@ proc_stride_comp_f(void *a, void *b)
  */
 static void
 stride_init(struct run_queue *rq) {
-     /* LAB6: YOUR CODE 
+     /* LAB6: 2012011327 
       * (1) init the ready process list: rq->run_list
       * (2) init the run pool: rq->lab6_run_pool
       * (3) set number of process: rq->proc_num to 0       
       */
+    rq->run_list = NULL;
+    rq->lab6_run_pool = NULL;
+    rq->proc_num = 0;
 }
 
 /*
@@ -58,7 +61,7 @@ stride_init(struct run_queue *rq) {
  */
 static void
 stride_enqueue(struct run_queue *rq, struct proc_struct *proc) {
-     /* LAB6: YOUR CODE 
+     /* LAB6: 2012011327
       * (1) insert the proc into rq correctly
       * NOTICE: you can use skew_heap or list. Important functions
       *         skew_heap_insert: insert a entry into skew_heap
@@ -67,6 +70,7 @@ stride_enqueue(struct run_queue *rq, struct proc_struct *proc) {
       * (3) set proc->rq pointer to rq
       * (4) increase rq->proc_num
       */
+      
 }
 
 /*
