@@ -22,14 +22,14 @@ do_exit：
 将当前进程状态改为PROC_ZOMBIE，若当前进程的父进程的wait_state为WT_CHILD，则将父进程唤醒，若此进程含有子进程，则将子进程交由内核线程initproc处理
 
 状态图：
-			wakeup_proc                           do_wait
-PROC_UNINIT_--------------------------->                    ----------------------> 
-					PROC_RUNNABLE <---------------------PROC_SLEEPING                         
+		wakeup_proc                               do_wait
+PROC_UNINIT_------------------------->                ----------------------> 
+					PROC_RUNNABLE <---------------------   PROC_SLEEPING                         
 						|		do_exit		|			
-						|					|
-						|do_exit				|
-						|					|
-						|			do_exit		|		
-					PROC_ZOMBIE <--------------------------------------|		
+						|				|
+						|do_exit			|
+						|				|
+						|		do_exit		|		
+					PROC_ZOMBIE <---------------------------|		
                             
 ```
