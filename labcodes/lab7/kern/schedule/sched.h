@@ -5,7 +5,7 @@
 #include <list.h>
 #include <skew_heap.h>
 
-#define MAX_TIME_SLICE 20
+#define MAX_TIME_SLICE 5
 
 struct proc_struct;
 
@@ -68,6 +68,7 @@ void schedule(void);
 void add_timer(timer_t *timer);     // add timer to timer_list
 void del_timer(timer_t *timer);     // del timer from timer_list
 void run_timer_list(void);          // call scheduler to update tick related info, and check the timer is expired? If expired, then wakup proc
+void sched_class_proc_tick(struct proc_struct *proc);
 
 #endif /* !__KERN_SCHEDULE_SCHED_H__ */
 
