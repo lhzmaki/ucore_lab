@@ -237,7 +237,7 @@ trap_dispatch(struct trapframe *tf) {
             assert(current != NULL);
             current->need_resched = 1;
         }
-        /* LAB6 YOUR CODE */
+        /* LAB6 2012011327 */
         /* IMPORTANT FUNCTIONS:
 	     * run_timer_list
 	     *----------------------
